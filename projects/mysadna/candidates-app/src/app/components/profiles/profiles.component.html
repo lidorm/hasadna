@@ -1,0 +1,31 @@
+<h1>Profiles</h1>
+<div>
+  <ul class="list-unstyled">
+    <li *ngFor="let user of users" class="card card-body mb-2" [class.bg-light]="user.active">
+      <div class="row">
+        <div class="col-sm-4">
+          <img *ngIf="user.image_url" class="img-fluid" [src]="user.image_url" alt="">
+        </div>
+        <div class="col-sm-8">
+          <h3 title="full name">{{user.first_name | uppercase}} {{user.last_name | uppercase}}</h3>
+          <ul class="list-group">
+            <li class="list-group-item">{{user.project}}</li>
+            <li class="list-group-item">
+              <a [href]="user.email">{{user.email}}</a>
+            </li>
+            <li class="list-group-item">
+              group: {{user.email}}
+            </li>
+            <li class="list-group-item">
+              5: {{5 | number: "1.2"}}
+            </li>
+            <li *ngIf="user.registered" class="list-group-item">
+              joined: {{user.registered | date:"shortdate"}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</div>
