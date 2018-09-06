@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
+import { ProfilesService } from "./components/profiles/profiles-servie.service" ;
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { ProfilesComponent } from './components/profiles/profiles.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProfilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
